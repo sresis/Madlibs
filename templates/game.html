@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>Game</title>
+  <title>Word Selection</title>
   <style>
   	body {
   		font-family: sans-serif;
@@ -11,11 +11,48 @@
 
 <body>
     <form action="/madlib">
-    	Do you want to play a game?
-    	<input type="radio" name="play" value="yes">
-    	<label>Yes</label>
-    	<input type="radio" name="play" value="no">
-    	<label>No</label>
+    	Please make some choices. These will go into Madlibs :D
+    	<div>
+    		<label>Person:</label>
+    		<textarea name="person"></textarea>
+    	</div>
+
+    	<div>
+    		Color: 
+    		<select name="color">
+    			<option value="pink">Pink</option>
+    			<option value="blue">Blue</option>
+    			<option value="black">Black</option>
+    			<option value="red">Red</option>
+    			<option value="rainbow">Rainbow</option>
+    		</select>
+		</div>
+
+		<div>
+			Noun:
+			<input type="radio" name="noun" value="bear">
+			<label>Bear</label>
+			<input type="radio" name="noun" value="table">
+			<label>Table</label>
+			<input type="radio" name="noun" value="teacup">
+			<label>Teacup</label>
+			<input type="radio" name="noun" value="Tesla">
+			<label>Tesla</label>
+		</div>
+
+    	<div>
+    		Adjective: 
+    		<select name="adjective">
+    			<option value="slimey">Slimey</option>
+    			<option value="bitey">Bitey</option>
+    			<option value="sparkly">Sparkly</option>
+    			<option value="happy">Happy</option>
+    			<option value="strong">Strong</option>
+    		</select>
+		</div>
+
+
     	<input type="submit">
+    </form>
 </body>
 </html>

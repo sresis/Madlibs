@@ -44,9 +44,20 @@ def greet_person():
 @app.route('/game')
 def show_madlib_form():
     """Take the user to the game if they responded 'yes'. Otherwise, say goodbye"""
+    
     play_response = request.args.get("play")
+    # if they don't want to play, take them to goodbye page
     if play_response == 'no':
         return render_template("goodbye.html")
+    # otherwise, take them to the game page
+    else:
+        return render_template("game.html")
+
+@app.route('/madlibs')
+def show_madlib():
+    """show the completed Madlibs story"""
+    return render_template("madlibs.html")
+
 
 
 
