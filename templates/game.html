@@ -1,17 +1,21 @@
 <!doctype html>
 <html>
 <head>
-  <title>A Compliment</title>
+  <title>Game</title>
+  <style>
+  	body {
+  		font-family: sans-serif;
+  	}
+  </style>
 </head>
+
 <body>
-    Hi {{ person }}! I think you're {{ compliment }}!
-    <form action="/game">
+    <form action="/madlib">
     	Do you want to play a game?
     	<input type="radio" name="play" value="yes">
     	<label>Yes</label>
     	<input type="radio" name="play" value="no">
     	<label>No</label>
     	<input type="submit">
-    </form>
 </body>
 </html>

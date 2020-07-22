@@ -41,6 +41,14 @@ def greet_person():
                            person=player,
                            compliment=compliment)
 
+@app.route('/game')
+def show_madlib_form():
+    """Take the user to the game if they responded 'yes'. Otherwise, say goodbye"""
+    play_response = request.args.get("play")
+    if play_response == 'no':
+        return render_template("goodbye.html")
+
+
 
 if __name__ == '__main__':
     # Setting debug=True gives us error messages in the browser and also
