@@ -62,10 +62,12 @@ def show_madlib():
     color_input = request.args.get("color")
     noun_input = request.args.get("noun")
     adjective_input = request.args.get("adjective")
+    verb_input = request.args.get("verb")
+
 
     #returns the page with the inputs filled in
     return render_template("madlib.html", person=person_input, 
-        color=color_input, noun=noun_input, adjective=adjective_input)
+        color=color_input, noun=noun_input, adjective=adjective_input, verb=verb_input)
 
 
 if __name__ == '__main__':
